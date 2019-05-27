@@ -1,0 +1,22 @@
+<header>
+	<div class="container"> </div>
+</header>
+
+<main class="quiz-round--main">
+	<div class="container">
+		<div class="game">
+			<div class="title">{{question.question}}</div>
+
+			<div class="answers">
+
+				<div class="answer" #element *ngFor="let answer of question.answers">
+
+					<p (click)="select(element, answer)">
+						{{answer.answerTitle}}
+					</p>
+				</div>
+			</div>
+			<button (click)='buttonClick()'>Agree</button>
+		</div>
+	</div>
+</main>
